@@ -26,7 +26,7 @@ y_train = np_utils.to_categorical(y_train, 10)
 if __name__ == '__main__':
     # 모델 구성(2(input) -> CONV(ReLU) -> CONV(ReLU) -> FC(sigmoid))
     model = Sequential()
-    #
+    #필터의 크기가 (3, 3) 이고, Stride는 1이고, 총 10개의 필터를 사용하는 Convolutional Layer를 추가합니다.
     model.add(Convolution2D(input_shape = (28, 28, 1), filters = 10, kernel_size = (3,3), strides = 1, padding = 'same'))
     #Activation Function 으로 Relu를 사용하였습니다.
     model.add(Activation('relu'))
