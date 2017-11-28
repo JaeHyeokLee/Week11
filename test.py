@@ -1,10 +1,13 @@
 # -*- coding: utf-8 -*-
 #필요한 패키지를 로드합니다.
+# import os
+# os.environ['KERAS_BACKEND'] = 'theano'
 from keras.models import Sequential, load_model
 from keras.layers.core import Dense, Activation, Dropout, Flatten
 from keras.layers.convolutional import Convolution2D, MaxPooling2D
 from keras.optimizers import Adam
 from keras.utils import np_utils
+from keras.datasets import mnist
 
 #Train할 때 저장한 best parameter를 불러옵니다.
 model = load_model('best_param.h5')
